@@ -1,0 +1,1209 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>免费在线视频网站_官方高清观看平台,正版原创内容社区</title>
+<meta name="description" content="免费在线视频网站官方网站，聚合高清原创视频内容，为企业与创作者提供专业内容生态与社区互动平台，持续运营值得信赖。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235c3df5'/%3E%3Cpath d='M25 19l20 13-20 13z' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --fsv-bg:#0e0f1a;
+    --fsv-bg-soft:#151726;
+    --fsv-card:#191c2e;
+    --fsv-line:#2a2e48;
+    --fsv-text:#eceeff;
+    --fsv-muted:#a3a8c7;
+    --fsv-primary:#5c3df5;
+    --fsv-primary-soft:#8a6bff;
+    --fsv-accent:#ffd166;
+    --fsv-cyan:#4be0e0;
+    --fsv-radius:16px;
+    --fsv-sticky:112px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:var(--fsv-sticky);}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 85% -10%, rgba(92,61,245,.35), transparent 60%),
+     径向渐变;
+    background-color:var(--fsv-bg);
+    color:var(--fsv-text);
+    font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  button{font-family:inherit;cursor:pointer;}
+  h1,h2,h3,h4,p,ul,ol{margin:0;}
+  ul,ol{padding-left:1.15em;}
+
+  .fsv-shell{max-width:1200px;margin:0 auto;padding:0 20px;}
+
+  /* 公告条 + 页头 吸顶 */
+  .fsv-topstick{
+    position:sticky;top:0;z-index:60;
+    backdrop-filter:blur(14px);
+    background:rgba(14,15,26,.92);
+    border-bottom:1px solid var(--fsv-line);
+  }
+  .fsv-notice{
+    display:flex;align-items:center;gap:12px;
+    font-size:13px;color:#0e0f1a;
+    background:linear-gradient(90deg,var(--fsv-accent),#ffb347 55%,var(--fsv-cyan));
+    padding:8px 20px;
+    font-weight:600;
+  }
+  .fsv-notice-tag{
+    flex:0 0 auto;background:#0e0f1a;color:var(--fsv-accent);
+    font-size:11px;padding:2px 9px;border-radius:999px;letter-spacing:1px;
+  }
+  .fsv-notice-list{display:flex;gap:22px;overflow:hidden;white-space:nowrap;}
+  .fsv-notice-list span{position:relative;padding-left:12px;}
+  .fsv-notice-list span::before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;border-radius:50%;background:#0e0f1a;transform:translateY(-50%);}
+  .fsv-notice-time{flex:0 0 auto;margin-left:auto;font-weight:500;opacity:.8;}
+
+  .fsv-header{display:flex;align-items:center;gap:22px;padding:14px 0;}
+  .fsv-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;letter-spacing:.5px;}
+  .fsv-brand-mark{
+    width:36px;height:36px;border-radius:11px;flex:0 0 auto;
+    background:linear-gradient(135deg,var(--fsv-primary),var(--fsv-cyan));
+    display:grid;place-items:center;
+  }
+  .fsv-brand-mark svg{width:16px;height:16px;}
+  .fsv-brand-sub{display:block;font-size:11px;font-weight:500;color:var(--fsv-muted);letter-spacing:2px;}
+  .fsv-nav{display:flex;gap:4px;margin-left:8px;flex-wrap:wrap;}
+  .fsv-nav a{
+    padding:7px 13px;border-radius:9px;font-size:14px;color:var(--fsv-muted);
+    transition:.22s;
+  }
+  .fsv-nav a:hover{background:var(--fsv-bg-soft);color:var(--fsv-text);}
+  .fsv-header-tools{display:flex;align-items:center;gap:10px;margin-left:auto;}
+  .fsv-search{position:relative;display:flex;align-items:center;}
+  .fsv-search input{
+    width:210px;background:var(--fsv-bg-soft);border:1px solid var(--fsv-line);
+    color:var(--fsv-text);border-radius:999px;padding:9px 36px 9px 16px;font-size:13px;outline:none;
+    transition:.25s;
+  }
+  .fsv-search input:focus{border-color:var(--fsv-primary-soft);width:250px;background:#1b1e33;}
+  .fsv-search-btn{
+    position:absolute;right:5px;top:50%;transform:translateY(-50%);
+    border:0;background:transparent;color:var(--fsv-muted);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;
+  }
+  .fsv-search-btn:hover{color:var(--fsv-accent);}
+  .fsv-search-hint{
+    position:absolute;top:46px;left:0;right:0;background:var(--fsv-card);
+    border:1px solid var(--fsv-line);border-radius:12px;padding:8px;display:none;
+    font-size:13px;color:var(--fsv-muted);z-index:5;box-shadow:0 16px 40px rgba(0,0,0,.45);
+  }
+  .fsv-search-hint.on{display:block;}
+  .fsv-search-hint b{color:var(--fsv-accent);}
+  .fsv-btn{
+    border:1px solid var(--fsv-line);background:var(--fsv-bg-soft);color:var(--fsv-text);
+    border-radius:10px;padding:9px 18px;font-size:14px;font-weight:600;transition:.22s;
+  }
+  .fsv-btn:hover{border-color:var(--fsv-primary-soft);transform:translateY(-1px);}
+  .fsv-btn-primary{
+    background:linear-gradient(135deg,var(--fsv-primary),#8a6bff);
+    border-color:transparent;color:#fff;
+    box-shadow:0 10px 26px rgba(92,61,245,.4);
+  }
+  .fsv-btn-primary:hover{filter:brightness(1.1);}
+  .fsv-btn-ghost{background:transparent;}
+  .fsv-burger{display:none;background:transparent;border:1px solid var(--fsv-line);color:var(--fsv-text);border-radius:9px;width:40px;height:38px;font-size:18px;}
+
+  /* HERO */
+  .fsv-hero{position:relative;padding:56px 0 40px;overflow:hidden;}
+  .fsv-hero-grid{
+    display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:44px;align-items:center;
+  }
+  .fsv-hero-eyebrow{
+    display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:2px;
+    color:var(--fsv-cyan);border:1px solid rgba(75,224,224,.35);border-radius:999px;padding:5px 14px;
+    background:rgba(75,224,224,.06);
+  }
+  h1.fsv-hero-title{
+    font-size:clamp(34px,4.6vw,58px);line-height:1.14;margin:20px 0 16px;letter-spacing:-1px;font-weight:900;
+  }
+  h1 .fsv-grad{
+    background:linear-gradient(100deg,var(--fsv-accent),var(--fsv-cyan) 60%,var(--fsv-primary-soft));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .fsv-hero-lead{color:var(--fsv-muted);font-size:16px;max-width:560px;}
+  .fsv-hero-desc{color:var(--fsv-muted);font-size:14px;margin-top:16px;max-width:580px;}
+  .fsv-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px;}
+  .fsv-stats{
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:32px;
+  }
+  .fsv-stat{
+    background:linear-gradient(160deg,rgba(92,61,245,.16),rgba(25,28,46,.6));
+    border:1px solid var(--fsv-line);border-radius:14px;padding:16px 18px;
+  }
+  .fsv-stat b{font-size:24px;display:block;color:var(--fsv-accent);letter-spacing:.5px;}
+  .fsv-stat span{font-size:12px;color:var(--fsv-muted);}
+  .fsv-hero-visual{position:relative;}
+  .fsv-hero-figure{
+    border-radius:22px;overflow:hidden;border:1px solid var(--fsv-line);
+    box-shadow:0 30px 80px rgba(0,0,0,.55);aspect-ratio:4/3;
+  }
+  .fsv-hero-figure img{width:100%;height:100%;object-fit:cover;}
+  .fsv-hero-badge{
+    position:absolute;left:-14px;bottom:22px;background:var(--fsv-card);
+    border:1px solid var(--fsv-line);border-radius:14px;padding:12px 16px;display:flex;gap:10px;align-items:center;
+    box-shadow:0 18px 40px rgba(0,0,0,.5);
+  }
+  .fsv-hero-badge b{color:var(--fsv-cyan);font-size:15px;}
+  .fsv-hero-badge small{display:block;color:var(--fsv-muted);font-size:11px;}
+  .fsv-live-dot{width:9px;height:9px;border-radius:50%;background:#ff5c7a;box-shadow:0 0 0 4px rgba(255,92,122,.18);}
+
+  /* 通用 section */
+  .fsv-section{padding:52px 0;border-top:1px solid var(--fsv-line);}
+  .fsv-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:26px;}
+  .fsv-sec-head h2{font-size:clamp(23px,2.6vw,32px);letter-spacing:-.5px;line-height:1.3;}
+  .fsv-sec-kicker{font-size:12px;letter-spacing:3px;color:var(--fsv-cyan);margin-bottom:8px;display:block;}
+  .fsv-sec-sub{color:var(--fsv-muted);font-size:13px;max-width:520px;}
+  .fsv-chip{
+    display:inline-block;font-size:12px;color:var(--fsv-primary-soft);
+    background:rgba(138,107,255,.12);border:1px solid rgba(138,107,255,.3);
+    border-radius:999px;padding:2px 10px;margin-right:6px;
+  }
+  .fsv-chip-cyan{color:var(--fsv-cyan);background:rgba(75,224,224,.1);border-color:rgba(75,224,224,.3);}
+  .fsv-chip-gold{color:var(--fsv-accent);background:rgba(255,209,102,.1);border-color:rgba(255,209,102,.3);}
+
+  /* 焦点内容模块：大幅图文 + 文字列表 */
+  .fsv-focus-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:26px;}
+  .fsv-focus-main{
+    background:var(--fsv-card);border:1px solid var(--fsv-line);border-radius:var(--fsv-radius);
+    overflow:hidden;transition:.28s;
+  }
+  .fsv-focus-main:hover{border-color:var(--fsv-primary-soft);transform:translateY(-3px);}
+  .fsv-focus-cover{aspect-ratio:16/9;overflow:hidden;position:relative;}
+  .fsv-focus-cover img{width:100%;height:100%;object-fit:cover;transition:.5s;}
+  .fsv-focus-main:hover .fsv-focus-cover img{transform:scale(1.04);}
+  .fsv-focus-cover-tag{
+    position:absolute;left:12px;top:12px;background:rgba(14,15,26,.78);color:var(--fsv-accent);
+    font-size:11px;padding:4px 10px;border-radius:8px;border:1px solid rgba(255,209,102,.35);
+  }
+  .fsv-focus-body{padding:20px 22px 22px;}
+  .fsv-focus-body h3{font-size:20px;line-height:1.4;margin-bottom:8px;}
+  .fsv-focus-body p{color:var(--fsv-muted);font-size:13.5px;}
+  .fsv-focus-meta{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:12px;color:var(--fsv-muted);}
+  .fsv-list{display:flex;flex-direction:column;gap:12px;min-width:0;}
+  .fsv-list-item{
+    display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;
+    background:var(--fsv-bg-soft);border:1px solid var(--fsv-line);border-radius:13px;padding:14px 16px;
+    transition:.22s;
+  }
+  .fsv-list-item:hover{border-color:var(--fsv-primary-soft);background:#1c2035;transform:translateX(3px);}
+  .fsv-list-item h3{font-size:15px;line-height:1.45;}
+  .fsv-list-item p{font-size:12.5px;color:var(--fsv-muted);margin-top:4px;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;}
+  .fsv-list-item .fsv-mini-meta{font-size:11.5px;color:#7d82a3;margin-top:6px;display:flex;gap:12px;flex-wrap:wrap;}
+  .fsv-like{
+    border:1px solid var(--fsv-line);background:transparent;color:var(--fsv-muted);
+    border-radius:10px;padding:7px 12px;font-size:12px;white-space:nowrap;transition:.2s;
+  }
+  .fsv-like:hover{border-color:var(--fsv-accent);color:var(--fsv-accent);}
+  .fsv-like.on{background:rgba(255,209,102,.14);border-color:var(--fsv-accent);color:var(--fsv-accent);}
+
+  /* 榜单模块 */
+  .fsv-rank-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
+  .fsv-rank-card{background:var(--fsv-bg-soft);border:1px solid var(--fsv-line);border-radius:var(--fsv-radius);padding:20px;}
+  .fsv-rank-card h3{font-size:16px;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+  .fsv-rank-card h3::before{content:"";width:4px;height:16px;border-radius:2px;background:linear-gradient(var(--fsv-accent),var(--fsv-primary-soft));}
+  .fsv-rank-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;}
+  .fsv-rank-list li{display:flex;gap:10px;align-items:baseline;font-size:13.5px;min-width:0;}
+  .fsv-rank-no{
+    flex:0 0 auto;width:20px;height:20px;border-radius:6px;display:grid;place-items:center;
+    font-size:11px;font-weight:700;background:#232846;color:var(--fsv-muted);
+  }
+  .fsv-rank-list li:nth-child(1) .fsv-rank-no{background:var(--fsv-accent);color:#141524;}
+  .fsv-rank-list li:nth-child(2) .fsv-rank-no{background:var(--fsv-cyan);color:#141524;}
+  .fsv-rank-list li:nth-child(3) .fsv-rank-no{background:var(--fsv-primary-soft);color:#fff;}
+  .fsv-rank-list li span{min-width:0;color:var(--fsv-text);}
+  .fsv-rank-hot{display:block;font-size:11px;color:#7d82a3;}
+
+  /* 专题企划 */
+  .fsv-topic-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+  .fsv-topic{
+    background:linear-gradient(170deg,#1d2038,var(--fsv-card));
+    border:1px solid var(--fsv-line);border-radius:var(--fsv-radius);padding:22px;display:flex;flex-direction:column;gap:12px;
+    transition:.26s;
+  }
+  .fsv-topic:hover{border-color:var(--fsv-cyan);transform:translateY(-4px);}
+  .fsv-topic-state{font-size:11px;align-self:flex-start;}
+  .fsv-topic h3{font-size:17px;line-height:1.4;}
+  .fsv-topic > p{font-size:13px;color:var(--fsv-muted);}
+  .fsv-topic ul{margin:2px 0 0;padding-left:1.1em;font-size:13px;color:#c3c7e0;display:flex;flex-direction:column;gap:6px;}
+  .fsv-topic-cover{border-radius:12px;overflow:hidden;aspect-ratio:16/9;border:1px solid var(--fsv-line);}
+  .fsv-topic-cover img{width:100%;height:100%;object-fit:cover;}
+
+  /* 品牌解析（长文） */
+  .fsv-analysis{display:grid;grid-template-columns:minmax(0,1fr);gap:0;}
+  .fsv-analysis-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px;align-items:start;}
+  .fsv-analysis h3{font-size:18px;margin:0 0 12px;color:var(--fsv-text);display:flex;align-items:center;gap:9px;}
+  .fsv-analysis h3::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--fsv-cyan);flex:0 0 auto;}
+  .fsv-analysis p{font-size:14px;color:#b9bdd8;margin-bottom:14px;}
+  .fsv-analysis strong{color:var(--fsv-accent);font-weight:700;}
+  .fsv-aside-card{
+    background:var(--fsv-bg-soft);border:1px solid var(--fsv-line);border-radius:var(--fsv-radius);
+    padding:22px;margin-bottom:18px;
+  }
+  .fsv-aside-card h3{font-size:16px;}
+  .fsv-aside-card ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;font-size:13px;color:var(--fsv-muted);}
+  .fsv-aside-card ul li{display:flex;gap:8px;}
+  .fsv-aside-card ul li::before{content:"◆";color:var(--fsv-primary-soft);font-size:10px;line-height:1.9;}
+
+  /* 创作者矩阵 */
+  .fsv-author-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:18px;}
+  .fsv-author{
+    background:var(--fsv-bg-soft);border:1px solid var(--fsv-line);border-radius:var(--fsv-radius);
+    padding:20px;display:flex;flex-direction:column;gap:12px;transition:.24s;
+  }
+  .fsv-author:hover{border-color:var(--fsv-primary-soft);transform:translateY(-3px);}
+  .fsv-author-top{display:flex;align-items:center;gap:12px;min-width:0;}
+  .fsv-avatar{
+    width:48px;height:48px;border-radius:14px;flex:0 0 auto;display:grid;place-items:center;
+    font-size:18px;font-weight:800;color:#fff;
+  }
+  .fsv-author-top b{display:block;font-size:15px;}
+  .fsv-author-top small{color:var(--fsv-muted);font-size:11.5px;}
+  .fsv-author p{font-size:13px;color:#b4b8d4;line-height:1.65;}
+  .fsv-author-foot{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--fsv-muted);margin-top:auto;}
+  .fsv-author-link{border:0;background:transparent;color:var(--fsv-cyan);font-size:12px;padding:0;}
+  .fsv-author-link:hover{text-decoration:underline;}
+
+  /* 评论双列 */
+  .fsv-comments{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}
+  .fsv-comment{
+    background:var(--fsv-card);border:1px solid var(--fsv-line);border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:8px;
+  }
+  .fsv-comment-head{display:flex;align-items:center;gap:9px;font-size:12.5px;}
+  .fsv-comment-head b{font-size:13px;}
+  .fsv-comment-head small{color:#7d82a3;}
+  .fsv-comment-avatar{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;color:#101222;flex:0 0 auto;}
+  .fsv-comment p{font-size:13px;color:#b8bcd8;}
+  .fsv-comment .fsv-stars{color:var(--fsv-accent);font-size:12px;letter-spacing:2px;}
+
+  /* 动态 & 合作 & FAQ */
+  .fsv-split{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:26px;align-items:start;}
+  .fsv-timeline{list-style:none;padding:0;margin:0;position:relative;}
+  .fsv-timeline::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--fsv-primary),transparent);}
+  .fsv-timeline li{position:relative;padding:0 0 20px 30px;font-size:13.5px;}
+  .fsv-timeline li::before{
+    content:"";position:absolute;left:0;top:6px;width:14px;height:14px;border-radius:50%;
+    background:var(--fsv-bg);border:2px solid var(--fsv-primary-soft);
+  }
+  .fsv-timeline li b{color:var(--fsv-text);display:block;font-size:14px;}
+  .fsv-timeline li span{color:#7d82a3;font-size:11.5px;letter-spacing:1px;}
+  .fsv-timeline li p{color:var(--fsv-muted);font-size:13px;margin-top:4px;}
+
+  .fsv-partner-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
+  .fsv-partner{
+    background:var(--fsv-bg-soft);border:1px dashed var(--fsv-line);border-radius:12px;padding:14px;
+    text-align:center;font-size:13px;color:#b9bdd8;font-weight:600;letter-spacing:.5px;transition:.2s;
+  }
+  .fsv-partner:hover{border-color:var(--fsv-cyan);color:var(--fsv-cyan);border-style:solid;}
+
+  .fsv-faq{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+  .fsv-faq details{
+    background:var(--fsv-bg-soft);border:1px solid var(--fsv-line);border-radius:12px;padding:0;overflow:hidden;
+  }
+  .fsv-faq summary{
+    padding:14px 18px;font-size:14px;font-weight:600;cursor:pointer;list-style:none;position:relative;padding-right:40px;
+  }
+  .fsv-faq summary::-webkit-details-marker{display:none;}
+  .fsv-faq summary::after{
+    content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);
+    color:var(--fsv-cyan);font-size:18px;font-weight:400;transition:.2s;
+  }
+  .fsv-faq details[open] summary::after{content:"–";color:var(--fsv-accent);}
+  .fsv-faq details p{padding:0 18px 16px;font-size:13px;color:var(--fsv-muted);}
+
+  /* 投稿 CTA */
+  .fsv-cta{
+    background:linear-gradient(120deg,rgba(92,61,245,.28),rgba(75,224,224,.14));
+    border:1px solid var(--fsv-line);border-radius:22px;padding:34px;display:grid;
+    grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;
+  }
+  .fsv-cta h2{font-size:clamp(21px,2.4vw,28px);margin-bottom:8px;}
+  .fsv-cta p{color:var(--fsv-muted);font-size:14px;max-width:620px;}
+  .fsv-cta .fsv-hero-actions{margin-top:0;}
+
+  /* 页脚 */
+  .fsv-footer{border-top:1px solid var(--fsv-line);padding:46px 0 30px;background:var(--fsv-bg-soft);}
+  .fsv-footer-grid{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,.6fr));gap:30px;}
+  .fsv-footer h4{font-size:13px;letter-spacing:1.5px;color:var(--fsv-text);margin-bottom:12px;}
+  .fsv-footer p{font-size:12.5px;color:var(--fsv-muted);}
+  .fsv-footer ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;font-size:12.5px;color:var(--fsv-muted);}
+  .fsv-footer ul a:hover{color:var(--fsv-cyan);}
+  .fsv-copy{
+    border-top:1px solid var(--fsv-line);margin-top:30px;padding-top:18px;
+    display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12px;color:#7d82a3;
+  }
+
+  /* 弹窗 & Toast */
+  .fsv-modal-mask{
+    position:fixed;inset:0;background:rgba(6,7,14,.72);backdrop-filter:blur(6px);
+    display:none;place-items:center;z-index:120;padding:20px;
+  }
+  .fsv-modal-mask.on{display:grid;}
+  .fsv-modal{
+    background:var(--fsv-card);border:1px solid var(--fsv-line);border-radius:18px;
+    max-width:480px;width:100%;padding:26px;box-shadow:0 40px 90px rgba(0,0,0,.6);
+  }
+  .fsv-modal h3{font-size:19px;margin-bottom:12px;}
+  .fsv-modal p{font-size:13.5px;color:var(--fsv-muted);margin-bottom:16px;}
+  .fsv-modal input,.fsv-modal textarea,.fsv-modal select{
+    width:100%;background:var(--fsv-bg-soft);border:1px solid var(--fsv-line);color:var(--fsv-text);
+    border-radius:10px;padding:10px 14px;font-size:13.5px;font-family:inherit;outline:none;margin-bottom:12px;
+  }
+  .fsv-modal input:focus,.fsv-modal textarea:focus,.fsv-modal select:focus{border-color:var(--fsv-primary-soft);}
+  .fsv-modal-actions{display:flex;gap:10px;justify-content:flex-end;}
+  .fsv-modal-close{position:relative;}
+  .fsv-toast{
+    position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+    background:#0b0c16;border:1px solid var(--fsv-primary-soft);color:var(--fsv-text);
+    padding:11px 22px;border-radius:999px;font-size:13.5px;opacity:0;pointer-events:none;transition:.3s;z-index:200;
+    box-shadow:0 16px 40px rgba(0,0,0,.6);
+  }
+  .fsv-toast.on{opacity:1;transform:translate(-50%,0);}
+  .fsv-top-btn{
+    position:fixed;right:24px;bottom:28px;width:44px;height:44px;border-radius:50%;
+    background:var(--fsv-primary);color:#fff;border:0;font-size:18px;display:grid;place-items:center;
+    opacity:0;pointer-events:none;transition:.3s;z-index:100;box-shadow:0 10px 26px rgba(92,61,245,.5);
+  }
+  .fsv-top-btn.on{opacity:1;pointer-events:auto;}
+
+  @media (max-width:1024px){
+    .fsv-hero-grid{grid-template-columns:minmax(0,1fr);gap:30px;}
+    .fsv-focus-grid,.fsv-split,.fsv-analysis-grid{grid-template-columns:minmax(0,1fr);}
+    .fsv-rank-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .fsv-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  }
+  @media (max-width:820px){
+    .fsv-header{flex-wrap:wrap;gap:12px;}
+    .fsv-nav{
+      display:none;order:5;width:100%;flex-direction:column;
+      background:var(--fsv-bg-soft);border:1px solid var(--fsv-line);border-radius:12px;padding:8px;
+    }
+    .fsv-nav.open{display:flex;}
+    .fsv-burger{display:grid;place-items:center;margin-left:auto;}
+    .fsv-header-tools{margin-left:0;order:4;}
+    .fsv-search input{width:150px;}
+    .fsv-search input:focus{width:190px;}
+    .fsv-notice-list{font-size:12px;gap:14px;}
+    .fsv-notice-time{display:none;}
+    :root{--fsv-sticky:118px;}
+  }
+  @media (max-width:640px){
+    .fsv-rank-grid,.fsv-comments,.fsv-faq,.fsv-partner-grid,.fsv-footer-grid{grid-template-columns:minmax(0,1fr);}
+    .fsv-stats{grid-template-columns:minmax(0,1fr);}
+    .fsv-cta{grid-template-columns:minmax(0,1fr);padding:24px;}
+    .fsv-hero-badge{left:8px;bottom:8px;}
+    .fsv-section{padding:40px 0;}
+    .fsv-author-grid{grid-template-columns:minmax(0,1fr);}
+  }
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="fsv-topstick">
+  <div class="fsv-notice" role="status">
+    <span class="fsv-notice-tag">官方发布</span>
+    <div class="fsv-notice-list">
+      <span>「城市十二时辰」第二季 12 集全部上线</span>
+      <span>创作激励计划第 7 期开放报名</span>
+      <span>4K 高清片源下载通道已开放</span>
+    </div>
+    <span class="fsv-notice-time">2026-11-22 更新</span>
+  </div>
+  <header class="fsv-header fsv-shell">
+    <a class="fsv-brand" href="#fsv-top" aria-label="免费在线视频网站官方网站首页">
+      <span class="fsv-brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M8 5.5l11 6.5-11 6.5z" fill="#fff"/></svg>
+      </span>
+      <span>映流<span class="fsv-brand-sub">官方视频门户</span></span>
+    </a>
+    <nav class="fsv-nav" id="fsvNav" aria-label="主导航">
+      <a href="#fsv-focus">焦点内容</a>
+      <a href="#fsv-rank">热度榜单</a>
+      <a href="#fsv-topic">专题企划</a>
+      <a href="#fsv-about">品牌解析</a>
+      <a href="#fsv-authors">创作者</a>
+      <a href="#fsv-comments">口碑</a>
+      <a href="#fsv-help">帮助中心</a>
+    </nav>
+    <div class="fsv-header-tools">
+      <div class="fsv-search">
+        <input id="fsvSearchInput" type="search" placeholder="搜索视频、创作者、专题" aria-label="站内搜索">
+        <button class="fsv-search-btn" id="fsvSearchBtn" aria-label="执行搜索">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        </button>
+        <div class="fsv-search-hint" id="fsvSearchHint"></div>
+      </div>
+      <button class="fsv-btn fsv-btn-primary" data-modal="submit">我要投稿</button>
+      <button class="fsv-burger" id="fsvBurger" aria-label="展开导航" aria-expanded="false">☰</button>
+    </div>
+  </header>
+</div>
+
+<main id="fsv-top">
+
+  <!-- S2 品牌首屏 -->
+  <section class="fsv-hero fsv-shell" aria-labelledby="fsv-hero-h1">
+    <div class="fsv-hero-grid">
+      <div>
+        <span class="fsv-hero-eyebrow">官方网站 · 免费在线视频网站</span>
+        <h1 class="fsv-hero-title" id="fsv-hero-h1">免费在线视频网站<br><span class="fsv-grad">让每一帧高清内容都被看见</span></h1>
+        <p class="fsv-hero-lead">作为深耕视频内容领域的品牌平台，我们为创作者与企业搭建开放、正版、高清的内容生态。</p>
+        <p class="fsv-hero-desc">映流是免费在线视频网站的官方网站与运营主体，坚持原创优先、品质优先、用户至上的原则，提供从浏览、收藏、评论到投稿、下载的一站式视频社区体验。企业级内容审核与高清转码链路持续运营，让每一部作品都值得信赖。</p>
+        <div class="fsv-hero-actions">
+          <a class="fsv-btn fsv-btn-primary" href="#fsv-focus">立即观看精品内容</a>
+          <a class="fsv-btn fsv-btn-ghost" href="#fsv-topic">查看专题企划</a>
+          <button class="fsv-btn fsv-btn-ghost" data-modal="share">分享官网给朋友</button>
+        </div>
+        <div class="fsv-stats" aria-label="平台核心数据">
+          <div class="fsv-stat"><b>12,860+</b><span>正版高清视频总量</span></div>
+          <div class="fsv-stat"><b>3,240 位</b><span>签约与入驻创作者</span></div>
+          <div class="fsv-stat"><b>98.6%</b><span>用户口碑好评率</span></div>
+        </div>
+      </div>
+      <div class="fsv-hero-visual">
+        <figure class="fsv-hero-figure">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 600'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23141933'/%3E%3Cstop offset='.55' stop-color='%235c3df5'/%3E%3Cstop offset='1' stop-color='%234be0e0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='600' fill='url(%23g1)'/%3E%3Ccircle cx='610' cy='140' r='92' fill='%23ffd166' opacity='.85'/%3E%3Ccircle cx='610' cy='140' r='130' fill='none' stroke='%23ffffff' stroke-opacity='.3' stroke-width='2'/%3E%3Crect x='70' y='300' width='420' height='210' rx='18' fill='%230d1024' opacity='.72'/%3E%3Crect x='96' y='330' width='180' height='14' rx='7' fill='%23ffd166'/%3E%3Crect x='96' y='360' width='330' height='10' rx='5' fill='%23ffffff' opacity='.45'/%3E%3Crect x='96' y='384' width='280' height='10' rx='5' fill='%23ffffff' opacity='.28'/%3E%3Crect x='96' y='420' width='120' height='34' rx='9' fill='%234be0e0'/%3E%3Cpath d='M360 360l60 36-60 36z' fill='%23ffffff' opacity='.9'/%3E%3Cg fill='%23ffffff' opacity='.16'%3E%3Crect x='90' y='110' width='8' height='90' rx='4'/%3E%3Crect x='112' y='140' width='8' height='60' rx='4'/%3E%3Crect x='134' y='90' width='8' height='110' rx='4'/%3E%3Crect x='156' y='160' width='8' height='40' rx='4'/%3E%3C/g%3E%3C/svg%3E" alt="免费在线视频网站官方首屏主视觉：深蓝色播放界面与金色圆形标识" width="800" height="600" loading="eager">
+        </figure>
+        <div class="fsv-hero-badge">
+          <span class="fsv-live-dot" aria-hidden="true"></span>
+          <div><b>正在高清播放</b><small>今日 1,204 部新内容上线</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 焦点内容模块 -->
+  <section class="fsv-section fsv-shell" id="fsv-focus" aria-labelledby="fsv-focus-title">
+    <div class="fsv-sec-head">
+      <div>
+        <span class="fsv-sec-kicker">FOCUS · 焦点推荐</span>
+        <h2 id="fsv-focus-title">免费在线视频网站本周焦点：企业精选与社区高热同步</h2>
+      </div>
+      <p class="fsv-sec-sub">编辑部依据完播率、收藏量与社区讨论热度综合筛选，每周三更新官方发布内容。</p>
+    </div>
+    <div class="fsv-focus-grid">
+      <article class="fsv-focus-main">
+        <div class="fsv-focus-cover">
+          <span class="fsv-focus-cover-tag">本周主推</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 450'%3E%3Cdefs%3E%3ClinearGradient id='c1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff7a59'/%3E%3Cstop offset='1' stop-color='%23ffd166'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='450' fill='%23161a2e'/%3E%3Crect x='0' y='300' width='800' height='150' fill='url(%23c1)' opacity='.85'/%3E%3Ccircle cx='170' cy='150' r='86' fill='%23ffd166' opacity='.9'/%3E%3Cpath d='M0 300 Q200 210 400 270 T800 240 V450 H0 Z' fill='%235c3df5' opacity='.5'/%3E%3Cg fill='%23ffffff' opacity='.85'%3E%3Crect x='90' y='60' width='150' height='12' rx='6'/%3E%3Crect x='90' y='86' width='240' height='8' rx='4' opacity='.55'/%3E%3C/g%3E%3Ccircle cx='640' cy='120' r='38' fill='none' stroke='%234be0e0' stroke-width='3'/%3E%3Cpath d='M628 104l28 16-28 16z' fill='%234be0e0'/%3E%3C/svg%3E" alt="焦点视频封面：城市十二时辰第一集海边日出剪辑画面" width="800" height="450" loading="lazy">
+        </div>
+        <div class="fsv-focus-body">
+          <span class="fsv-chip fsv-chip-gold">城市探索</span><span class="fsv-chip fsv-chip-cyan">4K 高清</span>
+          <h3>《城市十二时辰》第 1 集：凌晨四点的码头与第一锅早茶</h3>
+          <p>跟拍广州黄沙水产市场到老西关茶楼，记录一天中最早醒来的城市切片。全片 4K 高清拍摄，免费在线视频网站官方正版首播，包含两条剪辑思路拆解。</p>
+          <div class="fsv-focus-meta">
+            <span>创作者：陆屿</span><span>播放 86.4 万</span><span>点赞 4.2 万</span><span>收藏 1.9 万</span>
+          </div>
+          <div class="fsv-hero-actions" style="margin-top:18px;">
+            <button class="fsv-btn fsv-btn-primary" data-modal="share">复制观看链接</button>
+            <button class="fsv-like" data-like>♡ 点赞 <b>42,180</b></button>
+          </div>
+        </div>
+      </article>
+      <div class="fsv-list" aria-label="焦点视频列表">
+        <article class="fsv-list-item">
+          <div>
+            <h3>《一分钟看懂转码》技术科普第 3 期</h3>
+            <p>从 H.264 到 AV1，用动画解释为什么同一部片子在不同设备上表现不同。</p>
+            <div class="fsv-mini-meta"><span>知识科普</span><span>青禾实验室</span><span>播放 34.1 万</span></div>
+          </div>
+          <button class="fsv-like" data-like aria-label="点赞该视频">♡ <b>9,842</b></button>
+        </article>
+        <article class="fsv-list-item">
+          <div>
+            <h3>《镜头里的母亲》人物访谈完整版</h3>
+            <p>三位创作者聊如何用家庭影像保存日常，拍摄设备与沟通技巧全部公开。</p>
+            <div class="fsv-mini-meta"><span>人物访谈</span><span>苏慢</span><span>播放 27.6 万</span></div>
+          </div>
+          <button class="fsv-like" data-like aria-label="点赞该视频">♡ <b>7,310</b></button>
+        </article>
+        <article class="fsv-list-item">
+          <div>
+            <h3>《一条视频的成本构成》行业观察</h3>
+            <p>拆解摄影、灯光、场地、后期四项开销，给新手创作者一份透明预算表。</p>
+            <div class="fsv-mini-meta"><span>行业观察</span><span>老闵制片</span><span>播放 21.3 万</span></div>
+          </div>
+          <button class="fsv-like" data-like aria-label="点赞该视频">♡ <b>5,206</b></button>
+        </article>
+        <article class="fsv-list-item">
+          <div>
+            <h3>《周末露营的一百种打开方式》第 6 集</h3>
+            <p>湖畔营地搭建实录，含装备清单与雨天应急方案，适合户外新手收藏。</p>
+            <div class="fsv-mini-meta"><span>户外活动</span><span>野行阿鹿</span><span>播放 18.9 万</span></div>
+          </div>
+          <button class="fsv-like" data-like aria-label="点赞该视频">♡ <b>4,668</b></button>
+        </article>
+        <article class="fsv-list-item">
+          <div>
+            <h3>《咖啡豆的九种处理法》深度测评</h3>
+            <p>水洗、日晒、蜜处理风味对照，一次盲测让风味差异具体可感。</p>
+            <div class="fsv-mini-meta"><span>深度测评</span><span>半糖豆子</span><span>播放 15.7 万</span></div>
+          </div>
+          <button class="fsv-like" data-like aria-label="点赞该视频">♡ <b>3,914</b></button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 数据榜单 -->
+  <section class="fsv-section fsv-shell" id="fsv-rank" aria-labelledby="fsv-rank-title">
+    <div class="fsv-sec-head">
+      <div>
+        <span class="fsv-sec-kicker">CHART · 数据榜单</span>
+        <h2 id="fsv-rank-title">免费在线视频网站热度榜 · 新人榜 · 口碑榜</h2>
+      </div>
+      <p class="fsv-sec-sub">榜单数据按最近 7 天播放、互动、完播与正向评价加权计算，每日 06:00 更新。</p>
+    </div>
+    <div class="fsv-rank-grid">
+      <div class="fsv-rank-card">
+        <h3>本周热度榜</h3>
+        <ol class="fsv-rank-list">
+          <li><span class="fsv-rank-no">1</span><span>《城市十二时辰》第 1 集<span class="fsv-rank-hot">播放 86.4 万 · 完播 71%</span></span></li>
+          <li><span class="fsv-rank-no">2</span><span>《一分钟看懂转码》第 3 期<span class="fsv-rank-hot">播放 34.1 万 · 完播 68%</span></span></li>
+          <li><span class="fsv-rank-no">3</span><span>《镜头里的母亲》完整版<span class="fsv-rank-hot">播放 27.6 万 · 完播 64%</span></span></li>
+          <li><span class="fsv-rank-no">4</span><span>《一条视频的成本构成》<span class="fsv-rank-hot">播放 21.3 万 · 完播 59%</span></span></li>
+          <li><span class="fsv-rank-no">5</span><span>《周末露营的一百种打开方式》<span class="fsv-rank-hot">播放 18.9 万 · 完播 57%</span></span></li>
+        </ol>
+      </div>
+      <div class="fsv-rank-card">
+        <h3>新人创作者榜</h3>
+        <ol class="fsv-rank-list">
+          <li><span class="fsv-rank-no">1</span><span>雾港记录（入驻 42 天）<span class="fsv-rank-hot">首作播放 9.8 万</span></span></li>
+          <li><span class="fsv-rank-no">2</span><span>小满的菜园（入驻 51 天）<span class="fsv-rank-hot">更新 14 条 · 涨粉 1.2 万</span></span></li>
+          <li><span class="fsv-rank-no">3</span><span>一页纸手作（入驻 63 天）<span class="fsv-rank-hot">收藏率 18.4%</span></span></li>
+          <li><span class="fsv-rank-no">4</span><span>夜行电台（入驻 70 天）<span class="fsv-rank-hot">评论互动 3,410 条</span></span></li>
+          <li><span class="fsv-rank-no">5</span><span>老周修旧物（入驻 88 天）<span class="fsv-rank-hot">复看率 42%</span></span></li>
+        </ol>
+      </div>
+      <div class="fsv-rank-card">
+        <h3>社区口碑榜</h3>
+        <ol class="fsv-rank-list">
+          <li><span class="fsv-rank-no">1</span><span>《遇见手艺人》系列<span class="fsv-rank-hot">好评 98.9% · 评价 1,842 条</span></span></li>
+          <li><span class="fsv-rank-no">2</span><span>《深夜便利店》纪录短片<span class="fsv-rank-hot">好评 98.2% · 评价 1,206 条</span></span></li>
+          <li><span class="fsv-rank-no">3</span><span>《我的第一台相机》<span class="fsv-rank-hot">好评 97.6% · 评价 964 条</span></span></li>
+          <li><span class="fsv-rank-no">4</span><span>《从零开始的剪辑课》<span class="fsv-rank-hot">好评 97.1% · 评价 883 条</span></span></li>
+          <li><span class="fsv-rank-no">5</span><span>《海边渔村的一日》<span class="fsv-rank-hot">好评 96.8% · 评价 712 条</span></span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4 专题企划 -->
+  <section class="fsv-section fsv-shell" id="fsv-topic" aria-labelledby="fsv-topic-title">
+    <div class="fsv-sec-head">
+      <div>
+        <span class="fsv-sec-kicker">SERIES · 专题企划</span>
+        <h2 id="fsv-topic-title">免费在线视频网站的原创专题：从企划到成片</h2>
+      </div>
+      <p class="fsv-sec-sub">每个专题由官方编辑部与社区创作者共同策划，持续更新，支持整季收藏与追更提醒。</p>
+    </div>
+    <div class="fsv-topic-grid">
+      <article class="fsv-topic">
+        <div class="fsv-topic-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 315'%3E%3Crect width='560' height='315' fill='%230f2c2c'/%3E%3Ccircle cx='450' cy='90' r='58' fill='%234be0e0' opacity='.55'/%3E%3Cpath d='M0 240 Q140 170 280 220 T560 200 V315 H0Z' fill='%231c6b62'/%3E%3Cg stroke='%23ffd166' stroke-width='4' opacity='.9'%3E%3Cpath d='M60 90h120'/%3E%3Cpath d='M60 110h80'/%3E%3C/g%3E%3Crect x='60' y='150' width='140' height='10' rx='5' fill='%23ffffff' opacity='.5'/%3E%3C/svg%3E" alt="专题画面：海边渔村专题青绿色调与灯塔剪影" width="560" height="315" loading="lazy">
+        </div>
+        <span class="fsv-topic-state fsv-chip fsv-chip-cyan">更新中 · 已上线 8 集</span>
+        <h3>《海岸线计划》在地文化纪录系列</h3>
+        <p>沿着海岸线走访渔村、盐场与老码头，记录正在消失的手艺与生活方式。</p>
+        <ul>
+          <li>第 8 集：盐场日出的第七道工序</li>
+          <li>第 9 集：渔网修补匠的一天</li>
+          <li>第 10 集：预告 · 海岛学校的最后一堂课</li>
+        </ul>
+      </article>
+      <article class="fsv-topic">
+        <div class="fsv-topic-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 315'%3E%3Crect width='560' height='315' fill='%232a1b3d'/%3E%3Crect x='0' y='0' width='560' height='315' fill='none' stroke='%23ffd166' stroke-width='1' opacity='.3'/%3E%3Ccircle cx='150' cy='150' r='66' fill='%23ff7a59' opacity='.8'/%3E%3Crect x='250' y='70' width='240' height='170' rx='12' fill='%23ffffff' opacity='.12'/%3E%3Crect x='270' y='92' width='130' height='10' rx='5' fill='%23ffd166'/%3E%3Crect x='270' y='116' width='190' height='8' rx='4' fill='%23ffffff' opacity='.45'/%3E%3Crect x='270' y='134' width='160' height='8' rx='4' fill='%23ffffff' opacity='.3'/%3E%3Cpath d='M330 190l40 24-40 24z' fill='%23ffffff' opacity='.85'/%3E%3C/svg%3E" alt="专题画面：创作者实战课深紫背景与课程卡片" width="560" height="315" loading="lazy">
+        </div>
+        <span class="fsv-topic-state fsv-chip fsv-chip-gold">已完结 · 共 12 集</span>
+        <h3>《创作者实战课》教程干货企划</h3>
+        <p>从脚本结构到调色输出，12 位一线创作者把完整工作流拆成可直接照做的步骤。</p>
+        <ul>
+          <li>第 4 集：三分钟说清分镜脚本怎么写</li>
+          <li>第 9 集：手持运镜的五个稳定技巧</li>
+          <li>第 12 集：成片导出与多平台适配清单</li>
+        </ul>
+      </article>
+      <article class="fsv-topic">
+        <div class="fsv-topic-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 315'%3E%3Crect width='560' height='315' fill='%231b2438'/%3E%3Cg fill='none' stroke='%235c3df5' stroke-width='3' opacity='.7'%3E%3Ccircle cx='280' cy='158' r='104'/%3E%3Ccircle cx='280' cy='158' r='70'/%3E%3Ccircle cx='280' cy='158' r='36'/%3E%3C/g%3E%3Ccircle cx='280' cy='158' r='14' fill='%23ffd166'/%3E%3Cg fill='%234be0e0'%3E%3Ccircle cx='120' cy='80' r='7'/%3E%3Ccircle cx='452' cy='240' r='7'/%3E%3Ccircle cx='430' cy='70' r='5'/%3E%3C/g%3E%3C/svg%3E" alt="专题画面：技术科普深蓝同心圆与荧光节点图形" width="560" height="315" loading="lazy">
+        </div>
+        <span class="fsv-topic-state fsv-chip">每周更新 · 已上线 5 集</span>
+        <h3>《看得见的技术》知识科普企划</h3>
+        <p>把播放器、画质与推荐背后的技术讲成普通人听得懂的语言。</p>
+        <ul>
+          <li>第 4 集：为什么高清视频加载得快</li>
+          <li>第 5 集：字幕与音轨是怎么同步的</li>
+          <li>第 6 集：预告 · 一次上传都发生了什么</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- S4/M15 品牌解析长文 -->
+  <section class="fsv-section fsv-shell" id="fsv-about" aria-labelledby="fsv-about-title">
+    <div class="fsv-sec-head">
+      <div>
+        <span class="fsv-sec-kicker">ABOUT · 品牌解析</span>
+        <h2 id="fsv-about-title">深度解析：免费在线视频网站如何构建可信赖的内容生态</h2>
+      </div>
+      <p class="fsv-sec-sub">本节为品牌故事与深度解析，说明平台的定位、创作链路与社区运营方法。</p>
+    </div>
+    <div class="fsv-analysis">
+      <div class="fsv-analysis-grid">
+        <div>
+          <h3>一、从“能看”到“值得看”：内容品质的底线与起点</h3>
+          <p>免费在线视频网站这个词，用户最先关心的是“免费”与“能不能看”，但一家真正持续运营的视频企业，必须回答第二个问题：看完之后值不值得记住。映流从创立之初就把“品质”写进产品流程——所有官方发布内容必须经过画质、音轨、字幕、封面、标题五项基础检查；所有创作者上传的原创作品，都要经过机器初筛与人工复核两道关卡。</p>
+          <p>在画质层面，平台为长视频建立了统一的高清转码链路，同一部片子会生成适配移动端、桌面端与投屏场景的多档码率，用户在网络波动时也不会看到长时间的花屏。在内容层面，编辑团队坚持为每一部重点作品撰写完整简介与看点标注，让用户在点开播放前就能判断内容是否适合自己。对一家视频品牌而言，<strong>正版与原创</strong>不是宣传语，而是审核表上的硬性条目。</p>
+          <p>我们同时把“企业”身份落到实处：合作机构上传的内容需提供授权说明，品牌方投放的专题需标注合作属性，用户投稿则必须确认原创。这套流程让免费在线视频网站在保持开放的同时，也保住了社区里最珍贵的信任感。很多老用户反馈，他们愿意在映流反复观看，是因为这里的内容推荐不夸张、不标题党，标签与内容基本对得上。</p>
+          <h3>二、创作者是内容生态的真正发动机</h3>
+          <p>一个视频社区能否长期繁荣，取决于创作者是否愿意留下来。映流为入驻创作者提供三类支持：第一类是稳定的分发，新作品在首发 72 小时内会进入新人推荐池，按完播与互动表现获得自然流量；第二类是工具支持，平台开放封面模板、章节标记与多平台适配导出，降低制作成本；第三类是成长路径，从新人榜到专题共建，创作者可以清晰地看到下一步目标。</p>
+          <p>目前在映流活跃的创作者覆盖城市探索、手作、户外、美食、知识科普与人物访谈等多个垂直领域。他们的共同点是愿意把细节讲清楚：拍一条露营视频，会同时给出装备清单与天气预案；拍一次咖啡测评，会说明豆种、烘焙度与冲煮参数。这种“讲得明白”的创作习惯，构成了平台口碑的基础。</p>
+          <p>平台还设置了创作激励计划与季度主题挑战，报名入口长期开放。优秀作品会进入官方专题企划，获得首页推荐位与额外分成。我们相信，<strong>创作者被认真对待，观众才会被认真对待</strong>。这也是免费在线视频网站能够保持社区活力的原因之一。</p>
+        </div>
+        <div>
+          <aside class="fsv-aside-card">
+            <h3>平台运营原则</h3>
+            <ul>
+              <li>原创优先：官方推荐位向原创内容倾斜</li>
+              <li>品质优先：画质、音轨、字幕三项不达标不上首页</li>
+              <li>用户至上：争议内容先下线复核再决定去留</li>
+              <li>透明合作：商业内容明确标注合作属性</li>
+            </ul>
+          </aside>
+          <aside class="fsv-aside-card">
+            <h3>内容团队构成</h3>
+            <ul>
+              <li>编辑与审核：18 人，三班轮值覆盖全天</li>
+              <li>技术转码与播放器：12 人，持续优化首帧速度</li>
+              <li>创作者运营：9 人，负责新人孵化与专题共建</li>
+              <li>社区服务：7 人，处理反馈与版权申诉</li>
+            </ul>
+          </aside>
+          <h3>三、社区活力从何而来：互动、规则与陪伴</h3>
+          <p>评论区是映流最花心思的地方。我们不做无尽下拉，而是鼓励“看完再说”：评论入口在播放进度过半后才高亮，减少未看先评。社区规则把人身攻击、搬运侵权与恶意刷分列为重点治理对象，处理结果在帮助中心公示。正因为有规则，讨论才能保持温度。</p>
+          <p>平台每月发起一次主题投票与一次创作挑战，用户可以用投票决定下期专题方向，也可以把喜欢的作品加入收藏夹整理成自己的片单。这些看似轻量的互动，实际上让社区从“内容消费地”变成了“共同经营的地方”。</p>
+          <h3>四、企业的长期主义：把每一次播放当作承诺</h3>
+          <p>作为一家企业，映流并不追求短期爆发式增长，而是把资源投入在播放稳定性、内容审核与创作者服务三件“慢事”上。我们公开了内容更新日志，修复了哪些播放问题、上线了哪些新功能，用户都能查到。社会责任方面，平台长期免费开放公益与科普类内容的推荐位，并支持教育机构申请授权使用。</p>
+          <p>对用户而言，免费在线视频网站意味着零门槛进入；对企业而言，这意味着必须用更扎实的工程质量与更严格的内容标准来承接这份信任。未来一年，映流会继续深耕高清播放与原创内容两个方向，让“值得信赖”成为用户首选的理由，而不是一句口号。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S5 创作者矩阵 -->
+  <section class="fsv-section fsv-shell" id="fsv-authors" aria-labelledby="fsv-authors-title">
+    <div class="fsv-sec-head">
+      <div>
+        <span class="fsv-sec-kicker">CREATORS · 创作者矩阵</span>
+        <h2 id="fsv-authors-title">免费在线视频网站的创作者社区：六位值得关注的面孔</h2>
+      </div>
+      <p class="fsv-sec-sub">点击“查看档案”可了解创作者擅长的领域与代表作品，欢迎在社区里与他们互动。</p>
+    </div>
+    <div class="fsv-author-grid">
+      <article class="fsv-author">
+        <div class="fsv-author-top">
+          <span class="fsv-avatar" style="background:linear-gradient(135deg,#5c3df5,#4be0e0);" aria-hidden="true">屿</span>
+          <div><b>陆屿</b><small>城市探索 · 纪录短片</small></div>
+        </div>
+        <p>常住广州的纪录短片创作者，擅长用一天的时间线讲述一座城市的生活节奏。拍摄习惯是提前踩点、现场只带一机一镜，追求自然光下的真实质感。代表系列《城市十二时辰》已更新两季。</p>
+        <div class="fsv-author-foot"><span>作品 86 · 粉丝 12.4 万</span><button class="fsv-author-link" data-author="陆屿|城市探索纪录短片创作者|作品 86 部，粉丝 12.4 万。擅长自然光纪录与时间线叙事，代表系列《城市十二时辰》。">查看档案</button></div>
+      </article>
+      <article class="fsv-author">
+        <div class="fsv-author-top">
+          <span class="fsv-avatar" style="background:linear-gradient(135deg,#ff7a59,#ffd166);" aria-hidden="true">禾</span>
+          <div><b>青禾实验室</b><small>知识科普 · 技术动画</small></div>
+        </div>
+        <p>由三位工程师组成的科普小组，专注把播放器、编码与网络传输讲清楚。视频以二维动画与实拍结合为主，脚本撰写周期长但信息密度高，被不少高校教师用作课堂补充材料。</p>
+        <div class="fsv-author-foot"><span>作品 42 · 粉丝 9.7 万</span><button class="fsv-author-link" data-author="青禾实验室|知识科普与动画创作者|作品 42 部，粉丝 9.7 万。擅长技术原理可视化，代表系列《看得见的技术》《一分钟看懂转码》。">查看档案</button></div>
+      </article>
+      <article class="fsv-author">
+        <div class="fsv-author-top">
+          <span class="fsv-avatar" style="background:linear-gradient(135deg,#4be0e0,#1c6b62);" aria-hidden="true">苏</span>
+          <div><b>苏慢</b><small>人物访谈 · 情感故事</small></div>
+        </div>
+        <p>访谈类创作者，长期关注家庭影像与代际沟通。拍摄时习惯只留一台机器与一个固定机位，让对方慢慢说完整。她的访谈不设提词器，成片常常保留大量停顿与沉默，观众评价“像坐在旁边听完了整场对话”。</p>
+        <div class="fsv-author-foot"><span>作品 58 · 粉丝 8.3 万</span><button class="fsv-author-link" data-author="苏慢|人物访谈创作者|作品 58 部，粉丝 8.3 万。专注家庭影像与代际沟通，代表作品《镜头里的母亲》《父亲的工具箱》。">查看档案</button></div>
+      </article>
+      <article class="fsv-author">
+        <div class="fsv-author-top">
+          <span class="fsv-avatar" style="background:linear-gradient(135deg,#8a6bff,#ff7a59);" aria-hidden="true">闵</span>
+          <div><b>老闵制片</b><small>行业观察 · 制片经验</small></div>
+        </div>
+        <p>入行十四年的制片人，做过广告、纪录片与小型院线片。他的视频以“把账算清楚”著称，常把项目预算、人员配置与踩坑记录直接摆上台面，是新入行创作者收藏率最高的账号之一。</p>
+        <div class="fsv-author-foot"><span>作品 73 · 粉丝 6.9 万</span><button class="fsv-author-link" data-author="老闵制片|制片与行业观察创作者|作品 73 部，粉丝 6.9 万。擅长项目预算拆解与流程管理，代表作品《一条视频的成本构成》。">查看档案</button></div>
+      </article>
+      <article class="fsv-author">
+        <div class="fsv-author-top">
+          <span class="fsv-avatar" style="background:linear-gradient(135deg,#4be0e0,#ffd166);" aria-hidden="true">鹿</span>
+          <div><b>野行阿鹿</b><small>户外活动 · 露营攻略</small></div>
+        </div>
+        <p>户外爱好者，常年在南方山地与湖畔活动。视频风格轻松但信息扎实，每期都会附装备清单、路线难度与天气预案，强调“安全回家才算完成一次户外”。她在社区发起的无痕露营倡议已有上千人参与。</p>
+        <div class="fsv-author-foot"><span>作品 64 · 粉丝 11.2 万</span><button class="fsv-author-link" data-author="野行阿鹿|户外与露营内容创作者|作品 64 部，粉丝 11.2 万。擅长路线攻略与安全预案，代表系列《周末露营的一百种打开方式》。">查看档案</button></div>
+      </article>
+      <article class="fsv-author">
+        <div class="fsv-author-top">
+          <span class="fsv-avatar" style="background:linear-gradient(135deg,#ffd166,#5c3df5);" aria-hidden="true">豆</span>
+          <div><b>半糖豆子</b><small>美食烹饪 · 深度测评</small></div>
+        </div>
+        <p>咖啡与烘焙方向的测评创作者，坚持盲测与重复实验，反对用单一感官描述下结论。她的测评视频会公开测试条件、豆样来源与评分表，社区里不少用户照着她的表格建立自己的风味笔记。</p>
+        <div class="fsv-author-foot"><span>作品 51 · 粉丝 7.5 万</span><button class="fsv-author-link" data-author="半糖豆子|美食与咖啡测评创作者|作品 51 部，粉丝 7.5 万。坚持盲测与公开评分表，代表作品《咖啡豆的九种处理法》。">查看档案</button></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- S6 用户评价 双列 -->
+  <section class="fsv-section fsv-shell" id="fsv-comments" aria-labelledby="fsv-comments-title">
+    <div class="fsv-sec-head">
+      <div>
+        <span class="fsv-sec-kicker">VOICE · 用户口碑</span>
+        <h2 id="fsv-comments-title">真实评价：用户眼中的免费在线视频网站</h2>
+      </div>
+      <p class="fsv-sec-sub">以下评价来自社区公开讨论，已做匿名处理，保留原始语气与长度差异。</p>
+    </div>
+    <div class="fsv-comments">
+      <article class="fsv-comment">
+        <div class="fsv-comment-head"><span class="fsv-comment-avatar" style="background:#ffd166;">林</span><b>林间小路</b><small>3 天前</small></div>
+        <p>追《城市十二时辰》追了整整一年。最打动我的是他们把镜头留给普通人，不刻意煽情。官网的追更提醒很好用，新一集上线当天就能收到。</p>
+        <span class="fsv-stars" aria-label="评分 5 星">★★★★★</span>
+      </article>
+      <article class="fsv-comment">
+        <div class="fsv-comment-head"><span class="fsv-comment-avatar" style="background:#4be0e0;">周</span><b>周工不加班</b><small>5 天前</small></div>
+        <p>技术科普那几集是真的有用，我把《一分钟看懂转码》转给了团队新人，比我自己讲半小时还清楚。</p>
+        <span class="fsv-stars" aria-label="评分 5 星">★★★★★</span>
+      </article>
+      <article class="fsv-comment">
+        <div class="fsv-comment-head"><span class="fsv-comment-avatar" style="background:#ff7a59;">阿</span><b>阿桃的相机</b><small>1 周前</small></div>
+        <p>画面很清晰，拖动进度条几乎不用等缓冲。唯一想提的建议是希望收藏夹能支持多级分类，我的片单已经有点乱了。</p>
+        <span class="fsv-stars" aria-label="评分 4 星">★★★★☆</span>
+      </article>
+      <article class="fsv-comment">
+        <div class="fsv-comment-head"><span class="fsv-comment-avatar" style="background:#8a6bff;">老</span><b>老张看片</b><small>1 周前</small></div>
+        <p>我关注这个平台主要是因为它不搞标题党。标题写的什么，点进去就是什么，这个在现在挺难得的。</p>
+        <span class="fsv-stars" aria-label="评分 5 星">★★★★★</span>
+      </article>
+      <article class="fsv-comment">
+        <div class="fsv-comment-head"><span class="fsv-comment-avatar" style="background:#4be0e0;">柚</span><b>柚子茶不加糖</b><small>2 周前</small></div>
+        <p>在社区认识了几位同好，大家会认真讨论怎么拍好一段二十秒的空镜。这种氛围让我愿意每周固定来逛逛。</p>
+        <span class="fsv-stars" aria-label="评分 5 星">★★★★★</span>
+      </article>
+      <article class="fsv-comment">
+        <div class="fsv-comment-head"><span class="fsv-comment-avatar" style="background:#ffd166;">北</span><b>北岸剪辑师</b><small>2 周前</small></div>
+        <p>投稿流程比想象中顺，上传完很快就有人反馈修改建议，不是冷冰冰的模板回复。这点我比较意外，也比较认可。</p>
+        <span class="fsv-stars" aria-label="评分 5 星">★★★★★</span>
+      </article>
+      <article class="fsv-comment">
+        <div class="fsv-comment-head"><span class="fsv-comment-avatar" style="background:#5c3df5;">音</span><b>音量调到十一</b><small>3 周前</small></div>
+        <p>希望以后多一些音乐现场类内容，纪录片已经很强了，想看看不同类型。</p>
+        <span class="fsv-stars" aria-label="评分 4 星">★★★★☆</span>
+      </article>
+      <article class="fsv-comment">
+        <div class="fsv-comment-head"><span class="fsv-comment-avatar" style="background:#ff7a59;">小</span><b>小满的菜园</b><small>3 周前</small></div>
+        <p>作为创作者说一句：后台数据看得很明白，哪个时间段观众会划走都标出来了，对改片真的有用。</p>
+        <span class="fsv-stars" aria-label="评分 5 星">★★★★★</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- S7 企业动态 / 合作品牌 / FAQ -->
+  <section class="fsv-section fsv-shell" id="fsv-help" aria-labelledby="fsv-help-title">
+    <div class="fsv-sec-head">
+      <div>
+        <span class="fsv-sec-kicker">UPDATES · 动态与服务</span>
+        <h2 id="fsv-help-title">免费在线视频网站企业动态、合作伙伴与帮助中心</h2>
+      </div>
+      <p class="fsv-sec-sub">官方发布节奏为每周一次功能更新，重要变动会同步到公告条与更新日志。</p>
+    </div>
+    <div class="fsv-split">
+      <div>
+        <h3 style="font-size:17px;margin-bottom:16px;">企业动态与版本更新</h3>
+        <ul class="fsv-timeline">
+          <li><span>2026-11-20</span><b>4K 片源下载通道上线</b><p>经授权的高清内容支持离线下载，单设备最多保存 20 部作品，下载权限与账号绑定。</p></li>
+          <li><span>2026-11-12</span><b>创作激励计划第 7 期开启报名</b><p>本期主题为“日常里的光”，面向纪录与生活记录方向，报名期为三周。</p></li>
+          <li><span>2026-11-03</span><b>播放器升级：首帧速度提升 34%</b><p>优化了移动端起播策略，弱网场景下的卡顿率明显下降，相关日志已在帮助中心披露。</p></li>
+          <li><span>2026-10-25</span><b>社区规则 2.0 公示</b><p>明确搬运与二次创作的边界，新增侵权申诉快速通道，处理时效缩短至 48 小时。</p></li>
+        </ul>
+        <h3 style="font-size:17px;margin:26px 0 12px;">帮助中心常见问题</h3>
+        <div class="fsv-faq">
+          <details open>
+            <summary>免费在线视频网站观看需要付费吗？</summary>
+            <p>基础观看服务永久免费，所有官方发布内容均可直接播放。部分授权片源的离线下载与超清画质属于附加服务，页面会明确标注，不会默认扣费。</p>
+          </details>
+          <details>
+            <summary>如何成为入驻创作者？</summary>
+            <p>通过首页“我要投稿”入口提交资料，通过基础审核后即可上传作品。首月会有运营同学协助完善封面、标题与标签。</p>
+          </details>
+          <details>
+            <summary>视频上传支持哪些格式？</summary>
+            <p>支持常见封装格式与编码，建议使用 1080P 及以上片源上传，平台会自动生成多档清晰度。上传前请确认你拥有作品的完整版权。</p>
+          </details>
+          <details>
+            <summary>收藏和片单会同步吗？</summary>
+            <p>登录状态下，收藏与片单会自动同步到账号，更换设备后重新登录即可恢复。</p>
+          </details>
+          <details>
+            <summary>遇到播放卡顿怎么办？</summary>
+            <p>可先尝试切换清晰度或刷新页面。若问题持续，可在帮助中心提交问题，附上设备型号与网络环境，技术团队会在 24 小时内回复。</p>
+          </details>
+          <details>
+            <summary>内容被搬运了如何申诉？</summary>
+            <p>在作品详情页点击举报，选择“版权申诉”，提交原创证明与发布时间截图，审核通过后平台会下架侵权内容并同步处理结果。</p>
+          </details>
+        </div>
+      </div>
+      <div>
+        <h3 style="font-size:17px;margin-bottom:16px;">合作品牌与伙伴</h3>
+        <div class="fsv-partner-grid">
+          <div class="fsv-partner">山海文旅</div>
+          <div class="fsv-partner">知行教育</div>
+          <div class="fsv-partner">木野户外</div>
+          <div class="fsv-partner">拾光影像</div>
+          <div class="fsv-partner">南岸咖啡</div>
+          <div class="fsv-partner">本地影像联盟</div>
+        </div>
+        <div class="fsv-aside-card" style="margin-top:18px;">
+          <h3>联系与投稿</h3>
+          <ul>
+            <li>商务合作：合作邮箱与对接人见帮助中心</li>
+            <li>内容投稿：点击页头“我要投稿”提交作品</li>
+            <li>社区反馈：帮助中心提交问题单</li>
+            <li>版权申诉：作品页举报 → 版权申诉</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 投稿 CTA -->
+  <section class="fsv-section fsv-shell" aria-labelledby="fsv-cta-title">
+    <div class="fsv-cta">
+      <div>
+        <h2 id="fsv-cta-title">把你的作品交给免费在线视频网站，让更多人看见</h2>
+        <p>无论是一次旅行记录、一段手作过程，还是一节讲清楚的知识课，只要内容真实、制作认真，都欢迎投稿。通过审核的作品将进入社区推荐池，优秀作品有机会参与官方专题企划。</p>
+      </div>
+      <div class="fsv-hero-actions">
+        <button class="fsv-btn fsv-btn-primary" data-modal="submit">立即投稿</button>
+        <button class="fsv-btn fsv-btn-ghost" data-modal="share">分享官网</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="fsv-footer">
+  <div class="fsv-shell">
+    <div class="fsv-footer-grid">
+      <div>
+        <div class="fsv-brand" style="margin-bottom:12px;">
+          <span class="fsv-brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M8 5.5l11 6.5-11 6.5z" fill="#fff"/></svg>
+          </span>
+          <span>映流<span class="fsv-brand-sub">官方视频门户</span></span>
+        </div>
+        <p>映流是免费在线视频网站的官方网站与运营主体，专注原创、正版、高清视频内容的持续运营，为企业与创作者提供可信赖的内容生态与社区服务。</p>
+        <p style="margin-top:10px;">客服时间：每日 09:00–22:00 · 社区反馈 48 小时内响应</p>
+      </div>
+      <div>
+        <h4>站内导航</h4>
+        <ul>
+          <li><a href="#fsv-focus">焦点内容</a></li>
+          <li><a href="#fsv-rank">数据榜单</a></li>
+          <li><a href="#fsv-topic">专题企划</a></li>
+          <li><a href="#fsv-authors">创作者</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>服务支持</h4>
+        <ul>
+          <li><a href="#fsv-help">帮助中心</a></li>
+          <li><a href="#fsv-help">版权申诉</a></li>
+          <li><a href="#fsv-about">品牌故事</a></li>
+          <li><a href="#fsv-comments">用户口碑</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>官方信息</h4>
+        <ul>
+          <li>内容更新：每周三、周六</li>
+          <li>功能发布：每周一次</li>
+          <li>合作咨询：见帮助中心</li>
+          <li>投稿通道：长期开放</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fsv-copy">
+      <span>映流 官方网站 · 版权所有 · 持续运营中</span>
+      <span>免费在线视频网站 · 高清正版原创内容社区 · 备案信息见官方公告</span>
+    </div>
+  </div>
+</footer>
+
+<button class="fsv-top-btn" id="fsvTopBtn" aria-label="回到顶部">↑</button>
+
+<div class="fsv-modal-mask" id="fsvModalMask" role="dialog" aria-modal="true" aria-labelledby="fsvModalTitle">
+  <div class="fsv-modal" id="fsvModal">
+    <h3 id="fsvModalTitle">提示</h3>
+    <div id="fsvModalBody"></div>
+  </div>
+</div>
+
+<div class="fsv-toast" id="fsvToast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  var toastEl = document.getElementById('fsvToast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('on');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('on'); }, 2200);
+  }
+
+  /* 移动端导航折叠 */
+  var burger = document.getElementById('fsvBurger');
+  var nav = document.getElementById('fsvNav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.textContent = open ? '✕' : '☰';
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 820){
+      nav.classList.remove('open');
+      burger.setAttribute('aria-expanded','false');
+      burger.textContent = '☰';
+    }
+  });
+
+  /* 搜索前端反馈 */
+  var searchInput = document.getElementById('fsvSearchInput');
+  var searchBtn = document.getElementById('fsvSearchBtn');
+  var searchHint = document.getElementById('fsvSearchHint');
+  var indexData = [
+    '城市十二时辰 · 城市探索纪录系列',
+    '一分钟看懂转码 · 知识科普',
+    '镜头里的母亲 · 人物访谈',
+    '一条视频的成本构成 · 行业观察',
+    '周末露营的一百种打开方式 · 户外攻略',
+    '咖啡豆的九种处理法 · 深度测评',
+    '海岸线计划 · 在地文化专题',
+    '创作者实战课 · 教程干货企划',
+    '陆屿 · 城市探索创作者',
+    '青禾实验室 · 知识科普创作者',
+    '社区规则 2.0 · 帮助中心',
+    '4K 片源下载 · 企业动态'
+  ];
+  function doSearch(){
+    var q = searchInput.value.trim();
+    if(!q){
+      searchHint.innerHTML = '输入关键词试试，例如 <b>城市</b>、<b>科普</b>、<b>露营</b>。';
+      searchHint.classList.add('on');
+      return;
+    }
+    var hits = indexData.filter(function(item){
+      return item.toLowerCase().indexOf(q.toLowerCase()) !== -1;
+    });
+    if(hits.length){
+      searchHint.innerHTML = '找到 <b>' + hits.length + '</b> 条相关内容：<br>' + hits.slice(0,4).map(function(h){ return '· ' + h; }).join('<br>');
+    }else{
+      searchHint.innerHTML = '暂未找到与「' + q.replace(/[<>&]/g,'') + '」直接匹配的内容，可尝试更短的关键词。';
+    }
+    searchHint.classList.add('on');
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){ if(e.key === 'Enter') doSearch(); });
+  searchInput.addEventListener('input', function(){ if(!searchInput.value.trim()) searchHint.classList.remove('on'); });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.fsv-search')) searchHint.classList.remove('on');
+  });
+
+  /* 点赞 +1/-1 */
+  document.querySelectorAll('[data-like]').forEach(function(btn){
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      var raw = btn.querySelector('b');
+      var num = parseInt(raw.textContent.replace(/,/g,''), 10) || 0;
+      var on = btn.classList.toggle('on');
+      num = on ? num + 1 : Math.max(0, num - 1);
+      raw.textContent = num.toLocaleString('en-US');
+      btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+      toast(on ? '已点赞，感谢支持' : '已取消点赞');
+    });
+  });
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('fsvTopBtn');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 560) topBtn.classList.add('on');
+    else topBtn.classList.remove('on');
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* 弹窗 */
+  var mask = document.getElementById('fsvModalMask');
+  var modalTitle = document.getElementById('fsvModalTitle');
+  var modalBody = document.getElementById('fsvModalBody');
+  function openModal(title, html){
+    modalTitle.textContent = title;
+    modalBody.innerHTML = html;
+    mask.classList.add('on');
+  }
+  function closeModal(){ mask.classList.remove('on'); }
+  mask.addEventListener('click', function(e){ if(e.target === mask) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  function bindModalClosers(){
+    document.querySelectorAll('[data-modal-close]').forEach(function(b){
+      b.addEventListener('click', closeModal);
+    });
+  }
+
+  /* 分享 */
+  function shareModal(){
+    openModal('分享免费在线视频网站',
+      '<p>把官网分享给朋友，一起发现值得反复观看的高清原创内容。</p>' +
+      '<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px;">' +
+        '<button class="fsv-btn" data-share="微信">微信</button>' +
+        '<button class="fsv-btn" data-share="微博">微博</button>' +
+        '<button class="fsv-btn" data-share="QQ">QQ</button>' +
+        '<button class="fsv-btn fsv-btn-primary" data-copy>复制链接</button>' +
+      '</div>' +
+      '<p style="font-size:12.5px;">复制链接后可在任意平台粘贴分享；分享内容须遵守社区规则，请勿传播未经授权的作品。</p>' +
+      '<div class="fsv-modal-actions"><button class="fsv-btn fsv-btn-ghost" data-modal-close>关闭</button></div>'
+    );
+    bindModalClosers();
+    modalBody.querySelectorAll('[data-share]').forEach(function(b){
+      b.addEventListener('click', function(){
+        toast('已生成' + b.getAttribute('data-share') + '分享提示');
+      });
+    });
+    var copyBtn = modalBody.querySelector('[data-copy]');
+    if(copyBtn){
+      copyBtn.addEventListener('click', function(){
+        var link = 'https://example.com/';
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(link).then(function(){ toast('链接已复制到剪贴板'); }, function(){ toast('复制失败，请手动复制'); });
+        }else{
+          var ta = document.createElement('textarea');
+          ta.value = link;
+          document.body.appendChild(ta);
+          ta.select();
+          try{ document.execCommand('copy'); toast('链接已复制到剪贴板'); }
+          catch(err){ toast('复制失败，请手动复制'); }
+          document.body.removeChild(ta);
+        }
+      });
+    }
+  }
+
+  /* 投稿 */
+  function submitModal(){
+    openModal('向免费在线视频网站投稿',
+      '<p>填写基本信息，运营同学会在 3 个工作日内通过社区反馈渠道回复审核结果。</p>' +
+      '<input type="text" id="fsvFormName" placeholder="作品标题" aria-label="作品标题">' +
+      '<select id="fsvFormCat" aria-label="作品分类">' +
+        '<option>城市探索</option><option>知识科普</option><option>人物访谈</option>' +
+        '<option>户外活动</option><option>美食烹饪</option><option>其他原创</option>' +
+      '</select>' +
+      '<textarea id="fsvFormDesc" rows="3" placeholder="用一两句话介绍作品内容与原创声明" aria-label="作品简介"></textarea>' +
+      '<div class="fsv-modal-actions">' +
+        '<button class="fsv-btn fsv-btn-ghost" data-modal-close>取消</button>' +
+        '<button class="fsv-btn fsv-btn-primary" id="fsvFormSubmit">提交审核</button>' +
+      '</div>'
+    );
+    bindModalClosers();
+    document.getElementById('fsvFormSubmit').addEventListener('click', function(){
+      var title = document.getElementById('fsvFormName').value.trim();
+      if(!title){ toast('请先填写作品标题'); return; }
+      closeModal();
+      toast('投稿已提交，审核结果将通过社区反馈通知');
+    });
+  }
+
+  /* 作者档案 */
+  function authorModal(info){
+    var parts = info.split('|');
+    openModal(parts[0] + ' 的创作者档案',
+      '<p><b>擅长领域：</b>' + parts[1] + '</p>' +
+      '<p><b>档案摘要：</b>' + parts[2] + '</p>' +
+      '<p>该创作者的作品均可在免费在线视频网站内高清观看，欢迎收藏与评论。</p>' +
+      '<div class="fsv-modal-actions">' +
+        '<button class="fsv-btn fsv-btn-ghost" data-modal-close>关闭</button>' +
+        '<button class="fsv-btn fsv-btn-primary" id="fsvFollowBtn">关注创作者</button>' +
+      '</div>'
+    );
+    bindModalClosers();
+    document.getElementById('fsvFollowBtn').addEventListener('click', function(){
+      toast('已关注 ' + parts[0] + '，新作上线将提醒');
+    });
+  }
+
+  document.addEventListener('click', function(e){
+    var t = e.target.closest('[data-modal]');
+    if(t){
+      var type = t.getAttribute('data-modal');
+      if(type === 'share') shareModal();
+      if(type === 'submit') submitModal();
+    }
+    var a = e.target.closest('[data-author]');
+    if(a){ authorModal(a.getAttribute('data-author')); }
+  });
+
+  /* 卡片悬停动效由 CSS 完成；标签筛选：为视频列表增加轻量筛选 */
+  document.querySelectorAll('.fsv-list-item').forEach(function(item){
+    item.addEventListener('mouseenter', function(){ item.style.willChange = 'transform'; });
+  });
+
+  /* 数字滚动（首屏核心数据） */
+  var statEls = document.querySelectorAll('.fsv-stat b');
+  var statStarted = false;
+  function runStats(){
+    if(statStarted) return;
+    statStarted = true;
+    statEls.forEach(function(el){
+      var text = el.textContent.trim();
+      var match = text.match(/[\d,.]+/);
+      if(!match) return;
+      var target = parseFloat(match[0].replace(/,/g,''));
+      var decimals = (match[0].split('.')[1] || '').length;
+      var suffix = text.replace(match[0], '');
+      var start = null;
+      function step(ts){
+        if(!start) start = ts;
+        var p = Math.min((ts - start) / 1100, 1);
+        var ease = 1 - Math.pow(1 - p, 3);
+        var val = target * ease;
+        el.textContent = (decimals ? val.toFixed(decimals) : Math.round(val).toLocaleString('en-US')) + suffix;
+        if(p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting) runStats(); });
+    }, {threshold:.4});
+    var statsBox = document.querySelector('.fsv-stats');
+    if(statsBox) io.observe(statsBox);
+  }else{
+    runStats();
+  }
+})();
+</script>
+</body>
+          </html>
